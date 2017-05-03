@@ -15,7 +15,6 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 
 class App extends React.Component {
   render() {
-    
     const MainNavigator = TabNavigator({
       welcome: { screen: WelcomeScreen },
       auth: { screen: AuthScreen },
@@ -31,6 +30,11 @@ class App extends React.Component {
           }
         })
       }
+    }, {
+      navigationOptions: {
+        tabBarVisible: false
+      },
+      lazy: true
     });
     
     return (
